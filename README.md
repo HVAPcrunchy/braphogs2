@@ -49,5 +49,7 @@ Third meeting 9/21/2026 to ensure final group 2 turn in is done, all attended
 
 Stuff done: github setup and distributed, 
 
+fourth meeting: 10/5/2026
+seting up github files, overview planning of logic, setting a timeline for when our individual modules will be done so that we can start working on the shared UI module that will call all the functions/modules and be the location of most of the testing.  Goal: Monday 12th, individual modules done.  friday 16th ui modules done and first draft finished project done. Continue testing and refining until turn in on the 18th.   All attended.
 
 
