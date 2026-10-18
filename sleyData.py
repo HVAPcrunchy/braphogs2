@@ -29,8 +29,8 @@ def calculate_final_pay(pay_rate1,hours1):
     fed_Tax_Prelim=pretax_Total_Temp*FEDERAL_TAX
     state_Tax_Prelim=pretax_Total_Temp*STATE_TAX
     all_Tax_Prelim=state_Tax_Prelim+fed_Tax_Prelim
-    final_postTax_Pay=pretax_Total_Temp-all_Tax_Prelim
-    return pretax_Total_Temp,final_PostTax_Pay
+    final_Posttax_Pay=pretax_Total_Temp-all_Tax_Prelim
+    return pretax_Total_Temp,final_Posttax_Pay
     
     
 #all scorpsley from here
