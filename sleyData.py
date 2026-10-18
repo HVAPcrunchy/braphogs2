@@ -53,18 +53,17 @@ def check_hours(hours):
 
 
 
-def split_hours(total_hours):
+#def split_hours(total_hours):
+    #check_hours(total_hours)
 
-    check_hours(total_hours)
+  #  if total_hours > OVERTIME_HOURS:
+     #  regular_hours = OVERTIME_HOURS
+       # overtime_hours = total_hours - OVERTIME_HOURS
+  #  else:
+     #   regular_hours = total_hours
+    #   overtime_hours = 0
 
-    if total_hours > OVERTIME_HOURS:
-        regular_hours = OVERTIME_HOURS
-        overtime_hours = total_hours - OVERTIME_HOURS
-    else:
-        regular_hours = total_hours
-        overtime_hours = 0
-
-    return regular_hours, overtime_hours
+  # return regular_hours, overtime_hours
 
 
 def calculate_gross_pay(pay_rate, regular_hours, overtime_hours):
