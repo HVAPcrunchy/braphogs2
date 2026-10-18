@@ -8,7 +8,7 @@
 # This function gets the employee ID from the user
 
 def get_employee_id():
-    """Communicate with UI module: identify which employee is reporting."""
+    #""Communicate with UI module: identify which employee is reporting."""
     while True:
         employee_ID = input("Please enter your employee ID: ").strip()
         if employee_ID:
@@ -16,12 +16,23 @@ def get_employee_id():
         print("Employee ID cannot be empty. Try again.")
 
 
+#added by nicole, this function checks for number of dependents employee has
+def get_Employee_Dependents():
+ while True:
+  employee_Dependents=int(input("please enter the number of dependents you have "))
+  if employee_Dependents>=0
+   return employee_Dependents
+  print("Employee dependents cannot be empty, if you have no dependents, please enter 0 ")
+  
+  
+
+
 
 # This function asks the user for their hours worked
 # It checks that the hours actually make sense
 
 def get_hours_worked():
-    """Accept reported hours and validate them (no improper hours)."""
+    #""Accept reported hours and validate them (no improper hours)."""
     while True:
         try:
             hours_worked = float(input("Please enter total hours worked: "))
@@ -41,7 +52,7 @@ def get_hours_worked():
 # Anything over 40 hours in a week counts as overtime
 
 def split_hours(hours_worked):
-    """Separate normal hours from overtime (over 40 hours a week = overtime)."""
+    #""Separate normal hours from overtime (over 40 hours a week = overtime)."""
     # Caps normal hours at 40; if fewer than 40 were worked, keep the actual value
     normal_hours = min(hours_worked, 40)
 
@@ -54,7 +65,7 @@ def split_hours(hours_worked):
 
 
 def save_to_database(employee_ID, normal_hours, overtime_hours):
-    """Hand accurate time tracking info to the database."""
+    #"""Hand accurate time tracking info to the database."""
 
  # Placeholder for database
     print("Saving to database...")
