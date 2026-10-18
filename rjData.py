@@ -20,7 +20,8 @@ def get_employee_id():
 def get_Employee_Dependents():
  while True:
   employee_Dependents=int(input("please enter the number of dependents you have "))
-  if employee_Dependents>=0
+  if employee_Dependents>=0:
+   print("Your number of dependents is ",employee_Dependents)
    return employee_Dependents
   print("Employee dependents cannot be empty, if you have no dependents, please enter 0 ")
   
