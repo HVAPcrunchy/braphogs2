@@ -1,6 +1,7 @@
 # calculation.py
 # Payroll calculation module - The Braphogs
 # Written by ScorpSley
+#edited by Nicole Metzler
 #
 # This file figures out how much an employee gets paid.
 # It uses the hours they worked and their pay rate.
@@ -10,13 +11,29 @@ OVERTIME_HOURS = 40        # after 40 hours in a week, it's overtime
 OVERTIME_RATE = 1.5        # overtime pays 1.5 times the normal rate
 MAX_HOURS = 168            # there are only 168 hours in a week
 
-FEDERAL_TAX = 0.12         # 12% federal tax
-SOCIAL_SECURITY = 0.062    # 6.2% social security
-MEDICARE = 0.0145          # 1.45% medicare
-
-
-
-
+STATE_TAX = 0.056         # edited to state tax by nicole
+FEDERAL_TAX = 0.079    # edited to fed tax by nicole
+#MEDICARE = 0.0145          # 1.45% medicare edited out by nicole, not a required category
+#def calculate_final_pay method added by nicole, using methods and variables made by ScorpSley
+def calculate_final_pay(pay_rate1,hours1):
+    check_pay_rate(pay_rate1)
+    check_hours(hours1)
+    overtime_Pay_Rate=pay_rate1*1.5
+    if(hours1>OVERTIME_HOURS):
+        overtime_Hours_Temp=hours1-OVERTIME_HOURS
+    else:
+        overtime_Hours_Temp=0
+    overtime_Pay_Temp=overtime_Hours_Temp*overtime_Pay_Rate
+    pretax_Pay_Temp=(hours1-overtime_Hours_Temp)*pay_rate1
+    pretax_Total_Temp=overtime_Pay_Temp+pretax_Pay_Temp
+    fed_Tax_Prelim=pretax_Total_Temp*FEDERAL_TAX
+    state_Tax_Prelim=pretax_Total_Temp*STATE_TAX
+    all_Tax_Prelim=state_Tax_Prelim+fed_Tax_Prelim
+    final_postTax_Pay=pretax_Total_Temp-all_Tax_Prelim
+    return pretax_Total_Temp,final_PostTax_Pay
+    
+    
+#all scorpsley from here
 def check_pay_rate(pay_rate):
     if type(pay_rate) != int and type(pay_rate) != float:
         raise ValueError("Pay rate must be a number")
