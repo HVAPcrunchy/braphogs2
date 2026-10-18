@@ -24,6 +24,13 @@ def get_Employee_Dependents():
    print("Your number of dependents is ",employee_Dependents)
    return employee_Dependents
   print("Employee dependents cannot be empty, if you have no dependents, please enter 0 ")
+
+def get_Employee_Name():
+ while True:
+  employee_Name= input("please enter your name ").strip()
+  if employee_Name:
+   return employee_Name
+  print("Employee name cannot be empty")
   
   
 
