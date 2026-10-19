@@ -13,7 +13,7 @@ MAX_HOURS = 168            # there are only 168 hours in a week
 
 STATE_TAX = 0.056         # edited to state tax by nicole
 FEDERAL_TAX = 0.079    # edited to fed tax by nicole
-#MEDICARE = 0.0145          # 1.45% medicare edited out by nicole, not a required category
+MEDICARE = 0.0145          # 1.45% medicare edited out by nicole, not a required category
 #def calculate_final_pay method added by nicole, using methods and variables made by ScorpSley
 def calculate_final_pay(pay_rate1,hours1):
     check_pay_rate(pay_rate1)
@@ -53,17 +53,16 @@ def check_hours(hours):
 
 
 
-#def split_hours(total_hours):
-    #check_hours(total_hours)
+def split_hours(total_hours):
+    check_hours(total_hours)
 
-  #  if total_hours > OVERTIME_HOURS:
-     #  regular_hours = OVERTIME_HOURS
-       # overtime_hours = total_hours - OVERTIME_HOURS
-  #  else:
-     #   regular_hours = total_hours
-    #   overtime_hours = 0
-
-  # return regular_hours, overtime_hours
+    if total_hours > OVERTIME_HOURS:
+        regular_hours = OVERTIME_HOURS
+        overtime_hours = total_hours - OVERTIME_HOURS
+    else:
+        regular_hours = total_hours
+        overtime_hours = 0
+    return regular_hours, overtime_hours
 
 
 def calculate_gross_pay(pay_rate, regular_hours, overtime_hours):
@@ -86,7 +85,7 @@ def calculate_deductions(gross_pay, extra_deductions=None):
         raise ValueError("Gross pay cannot be negative")
 
     federal = round(gross_pay * FEDERAL_TAX, 2)
-    social = round(gross_pay * SOCIAL_SECURITY, 2)
+    social = round(gross_pay * STATE_TAX, 2)
     medicare = round(gross_pay * MEDICARE, 2)
     total = federal + social + medicare
 

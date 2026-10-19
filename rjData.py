@@ -72,7 +72,7 @@ def split_hours(hours_worked):
 
 
 
-def save_to_database(employee_ID, normal_hours, overtime_hours):
+#def save_to_database(employee_ID, normal_hours, overtime_hours):
     #"""Hand accurate time tracking info to the database."""
 
  # Placeholder for database
@@ -83,7 +83,7 @@ def save_to_database(employee_ID, normal_hours, overtime_hours):
 
 
 
-employee_ID = get_employee_id()
-hours_worked = get_hours_worked()
-normal_hours, overtime_hours = split_hours(hours_worked)
-save_to_database(employee_ID, normal_hours, overtime_hours)
+#employee_ID = get_employee_id()
+#hours_worked = get_hours_worked()
+#normal_hours, overtime_hours = split_hours(hours_worked)
+#save_to_database(employee_ID, normal_hours, overtime_hours)

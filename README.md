@@ -53,3 +53,8 @@ fourth meeting: 10/5/2026
 seting up github files, overview planning of logic, setting a timeline for when our individual modules will be done so that we can start working on the shared UI module that will call all the functions/modules and be the location of most of the testing.  Goal: Monday 12th, individual modules done.  friday 16th ui modules done and first draft finished project done. Continue testing and refining until turn in on the 18th.   All attended.
 
 
+Username and ID combo list:
+["John Cena", "Jeremy Erikson", "Amy Johnson", "Robert Jordan", "Zintia Mendoza", "Miguel Diaz", "Ibrahim alAhksa", "Erika Walschlag", "Donald Drumpf", "Alice Jacobs"]
+["0001"          "0002"            "0003"          "0004"         "0005"             "0006"          "0007"             "0008"            "0009"           "0010"]
+the above username must be entered with their appropriate ID to serve as a password, or the program will not allow the login.
+
