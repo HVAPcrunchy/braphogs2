@@ -29,7 +29,7 @@ def employeeAuth():
     employee_Index_Number=position1
     return
   print("The employee name and ID combination did not match the database. Ending attempt. Please Try again.")
-  reInitialize()
+
   
 
   
